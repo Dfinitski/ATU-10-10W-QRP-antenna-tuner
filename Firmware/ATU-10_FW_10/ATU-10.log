@@ -1,0 +1,21 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16LF18877 -DL -O11111114 -fo32 -N"D:\Projects\ATU-10\Firmware\ATU-10.mcppi" -SP"C:\Program Files (x86)\mikroC PRO for PIC\Defs\" -SP"C:\Program Files (x86)\mikroC PRO for PIC\Uses\P16_Enh\" -SP"D:\Projects\ATU-10\Firmware\" -IP"C:\Program Files (x86)\mikroC PRO for PIC\Uses\P16_Enh\" "pic_init.c" "oled_control.c" "Soft_I2C.c" "main.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_Conversions.mcl" "__Lib_Button.mcl" "__Lib_ADC_18xxx.mcl"	 
+hint: 0	1139	Available RAM: 4080 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	pic_init.c
+diagnostics: 67	123	Compiled Successfully	pic_init.c
+diagnostics: 0	122	Compilation Started	font_5x8.h
+diagnostics: 273	123	Compiled Successfully	oled_control.c
+diagnostics: 0	122	Compilation Started	soft_i2c.h
+diagnostics: 92	123	Compiled Successfully	Soft_I2C.c
+diagnostics: 0	122	Compilation Started	pic_init.h
+hint: 0	1004	interrupt handler (interupt at 0x0004)	main.c
+diagnostics: 740	123	Compiled Successfully	main.c
+hint: 475	1164	Variable 'f' has been eliminated by optimizer	main.c
+hint: 497	1164	Variable 'f' has been eliminated by optimizer	main.c
+hint: 521	1164	Variable 'p' has been eliminated by optimizer	main.c
+diagnostics: 0	127	All files Compiled in 172 ms	 
+hint: 0	1144	Used RAM (bytes): 306 (8%)  Free RAM (bytes): 3774 (92%)	Used RAM (bytes): 306 (8%)  Free RAM (bytes): 3774 (92%)
+hint: 0	1144	Used ROM (program words): 8264 (25%)  Free ROM (program words): 24504 (75%)	Used ROM (program words): 8264 (25%)  Free ROM (program words): 24504 (75%)
+diagnostics: 0	125	Project Linked Successfully	ATU-10.mcppi
+diagnostics: 0	128	Linked in 78 ms	 
+diagnostics: 0	129	Project 'ATU-10.mcppi' completed: 281 ms	 
+diagnostics: 0	103	Finished successfully: 26 Jun 2021, 23:38:44	ATU-10.mcppi
