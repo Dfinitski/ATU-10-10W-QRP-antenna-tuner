@@ -1,6 +1,6 @@
 # ATU-10  - the tyny QRP antenna Tuner.
 
-### Oficial conversation group - 
+### Oficial conversation group - https://groups.io/g/ATU100
 
    The tuner is assembled in an affordable Chinese case 100x71x25 mm, the front and rear panels are made as PCB, in the same way as the main printed circuit board.
 On the front panel there is a control button, a small 0.91" OLED 128 * 32 display and a USB Type C connector, used to charge the tuner's built-in battery and connect to a computer to change the firmware.
