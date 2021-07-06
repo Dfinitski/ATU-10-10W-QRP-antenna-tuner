@@ -1,4 +1,4 @@
-# ATU-10  - The Tyny QRP Antenna Tuner compartible with IC-705.
+# ATU-10  - The Tyny QRP Automatic Antenna Tuner
 
 ### Oficial conversation group - https://groups.io/g/ATU100
 
