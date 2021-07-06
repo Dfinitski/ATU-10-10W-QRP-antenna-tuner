@@ -2,7 +2,9 @@
 
 ### Oficial conversation group - https://groups.io/g/ATU100
 
-New in FW version 1.2  1 - Display memory feature for last SWR  added  2 - full automatic mode error solved.
+###### New in FW version 1.2  
+1 - Display memory feature for last SWR  added  
+2 - full automatic mode error solved.
 
 New in FW version 1.1
 
