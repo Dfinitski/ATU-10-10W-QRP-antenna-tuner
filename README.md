@@ -1,6 +1,14 @@
-# ATU-10  - The Tyny QRP Antenna Tuner.
+# ATU-10  - The Tyny QRP Antenna Tuner compartible with IC-705.
 
 ### Oficial conversation group - https://groups.io/g/ATU100
+
+Current FW version is 1.2
+
+New in FW version 1.2
+1 - Display memory feature for last SWR  added
+2 - full automatic mode error solved.
+
+New in FW version 1.1
 
    The tuner is assembled in an affordable Chinese case 100x71x25 mm, the front and rear panels are made as PCB, in the same way as the main printed circuit board.
 On the front panel there is a control button, a small 0.91" OLED 128 * 32 display and a USB Type C connector, used to charge the tuner's built-in battery and connect to a computer to change the firmware.
