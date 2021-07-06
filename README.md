@@ -5,8 +5,8 @@
 Current FW version is 1.2
 
 New in FW version 1.2
-1 - Display memory feature for last SWR  added
-2 - full automatic mode error solved.
+ 1 - Display memory feature for last SWR  added
+ 2 - full automatic mode error solved.
 
 New in FW version 1.1
 
