@@ -4,9 +4,9 @@
 ### Schematic and assembly instruction by VK3PE - http://carnut.info/ATU_N7DDC/ATU-10/ATU-10_by-vk3pe_build_info/ATU-10_vk3pe_V1.2_ALL_INFO_290921.pdf
 
 ###### New in FW version 1.4
-1 - The button glitches resolved
-2 - More stability in bus transfer to OLED
-3 - No continious data transferring to the display
+1 - The button glitches solved   
+2 - More stability in bus transfer to OLED   
+3 - No continious data transferring to the display   
 
 ###### New in FW version 1.2  
 1 - Display memory feature for last SWR  added  
