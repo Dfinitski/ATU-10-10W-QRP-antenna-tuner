@@ -3,8 +3,30 @@
 ### Official conversation group - https://groups.io/g/ATU100
 ### Schematic and assembly instruction by VK3PE - http://carnut.info/ATU_N7DDC/ATU-10/ATU-10_by-vk3pe_build_info/ATU-10_vk3pe_V1.2_ALL_INFO_290921.pdf
 
-###### AON FW is always on
-no automatic power off. Use button to power off after using to avoid discharging the battery.
+###### New in FW version 1.6
+1 - New better meassurement formula for Power and SWR calculation, compensation and calibration.
+2 - Setting by Cells control implementation. There are 10 cells you can find opening a FW .hex file in Notepad++ program as Intel HEX file.
+At the end by address EEE0 and EEF0 you can see them and change values. After changing any value you must to correct a checksumm for each
+changed string. Copy the needed string into Checsumm.htm and get correct checksumm. It should be green coolor before you can save changed .hex FW file.
+
+[![](https://github.com/Dfinitski/ATU-10-10W-QRP-antenna-tuner/blob/main/Photos/tuner_2.jpg)](https://github.com/Dfinitski/ATU-10-10W-QRP-antenna-tuner/blob/main/Photos/tuner_2.jpg)
+
+Cells description:
+1) Time to display off in minutes, 5 mins by default, 0 to always on display
+2) time to power off in minutes, 30 mins by default, 0 to always power on
+3) relay's delay time, voltage applied to coiles in ms, 7 ms by default
+4) min power to start tuning in ten's parts of Watt, 10 by default (1.0 W). This value can not be 0
+5) max power to start tuning in watts, 15 by default
+6) Delta SWR to auto start tuning in ten's parts SWR, 13 by default (SWR = 1.3)
+7) Auto mode 1 for activate or 0 to off. 1 by default
+8) Calibration coefficient for 1W power, 4 by default for BAT41 diodes
+9) calibration coefficient for 10W power, 14 by default for BAT41 diodes
+10) Peak detector time for Power meassurement in tens ms, 60 (600ms)
+
+If you are using 1N5711 diodes in the RF detector, you can calibrate the power meassurement.
+Apply known 1W of power on 7MHz and change cell 8 for correct value.
+Apply known 10W of power on 7MHw and change cell 9 for correct value.
+Repeat it couple times to reach a good result.
 
 ###### New in FW version 1.5
 1 - Tuning algorithm improvement   
