@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HEX file checksum calculator - fischl.de</title>
+        <link rel="stylesheet" type="text/css" href="../style.css"/>
+        <meta name="keywords" content="HEX file, checksum, calculator"/>
+        <meta name="description" content="HEX file checksum online calculator"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <style type="text/css">
+            #start { background-color: #FFC; }
+            #bytecount { background-color: #CFC; }
+            #address { background-color: #CCF; }
+            #type { background-color: #FCC; }
+            #data { background-color: #CFF; }
+            #checksum { background-color: #CCC; }
+            #errors {
+                color: red;
+            }
+
+
+            #hexline {
+                width: 500px;
+            }
+            #calcresult {
+                border: 2px solid #aaa;
+                padding: 20px;
+                display: none;
+                background-color: #f9f9f9;
+            }
+            button {
+                margin: 15px 0;
+            }
+	    </style>
+
+        <script type="text/javascript">
+	    function calculate() {
+                var hexline = document.getElementById("hexline").value;
+                var start = hexline.substring(0, 1);
+                var bytecount = hexline.substring(1, 3);
+                var bytecountDec = parseInt(bytecount, 16);
+                var address = hexline.substring(3, 7);
+                var addressDec = parseInt(address, 16);
+                var type = hexline.substring(7, 9);
+                var typeDec = parseInt(type, 16);
+                var data = hexline.substring(9, 9 + 2 * bytecountDec);
+                var checksum = hexline.substring(9 + 2 * bytecountDec, 9 + 2 * bytecountDec + 2);
+                var checksumDec = parseInt(checksum, 16);
+                
+                var typeString = "Unknown";
+                switch (typeDec) {
+                   case 0x00: typeString = "Data"; break;
+                   case 0x01: typeString = "End Of File"; break;
+                   case 0x02: typeString = "Extended Segment Address"; break;
+                   case 0x03: typeString = "Start Segment Address"; break;
+                   case 0x04: typeString = "Extended Linear Address"; break;
+                   case 0x05: typeString = "Start Linear Address"; break;
+                }
+
+                var i;
+                var checksumVerify = 0;
+                for (i = 0; i < bytecountDec + 4; i++) {
+                    var val = parseInt(hexline.substring(1 + i * 2, 3 + i * 2), 16);
+                    checksumVerify += val;
+                }
+                checksumVerify = checksumVerify % 256;
+                if (checksumVerify > 0) checksumVerify = 256 - checksumVerify;
+
+                var errors = "";
+                if (start != ':') errors += "Start byte must be ':'!<br/>";
+                if (hexline.length < (bytecountDec * 2) + 9) errors += "Hex line too short! Some bytes are missing!<br/>";
+                if (checksum.length < 2) errors += "Checksum too short!<br/>";
+                if (checksumDec != checksumVerify) errors += "Checksum mismatch!<br/>";
+
+                document.getElementById("calcresult").innerHTML = "<span id='start'>" + start + "<\/span><span id='bytecount'>" + bytecount + "<\/span><span id='address'>" + address + "<\/span><span id='type'>" + type + "<\/span><span id='data'>" + data + "<\/span><span id='checksum'>" + checksum + "<\/span><br\/><br\/>" +
+                    "Address: " + address + "<sub>16<\/sub> = " + addressDec + "<sub>10<\/sub><br\/>" +
+                    "Byte count: " + bytecount + "<sub>16<\/sub> = " + bytecountDec + "<sub>10<\/sub><br\/>" + 
+                    "Record type: " + type + "<sub>16<\/sub> = " + typeString + "<br\/>" +
+                    "Checksum: " + checksum + "<sub>16<\/sub><br\/><br\/>" +
+                    "Calculated checksum: " + ('0' + checksumVerify.toString(16).toUpperCase()).slice(-2) + "<sub>16<\/sub><br\/><br\/>" +
+                    "<span id='errors'>" + errors + "<\/span>";
+                document.getElementById("calcresult").style.display = "block";
+            }
+
+            window.onload = function () {
+                document.getElementById("calculate").onclick = calculate;
+            };
+	    </script>
+
+
+    </head>
+	
+    <body>
+
+        <div id="content">
+
+
+            <h1>HEX file checksum online calculator</h1>
+            <i>Firmware for microcontrollers are often stored in <a href="https://en.wikipedia.org/wiki/Intel_HEX">Intel HEX files</a>.
+            For testing and debugging sometimes it is necessary to change some values directly in the HEX file.
+            The Intel HEX file format is easy to read and to modify except the checksum.</i>
+
+            <h2>Analyse HEX file line</h2>
+            Please enter one line of HEX file to analyze it, to calculate and verify the checksum. If you don't know the checksum, you can omit it.<br/>
+            <br/>
+            <form action="">
+              <input type="text" id="hexline" value=":100130003F0156702B5E712B722B732146013421C7"/><br/>
+              <button type="button" id="calculate">Analyse</button>
+            </form>
+            <div id="calcresult"></div>
+
+
+        </div>
+    </body>
+</html>
