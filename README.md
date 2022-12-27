@@ -4,7 +4,7 @@
 ### Schematic and assembly instruction by VK3PE - http://carnut.info/ATU_N7DDC/ATU-10/ATU-10_by-vk3pe_build_info/ATU-10_vk3pe_V1.2_ALL_INFO_290921.pdf
 
 ###### New in FW version 1.6
-1 - New better meassurement formula for Power and SWR calculation, compensation and calibration.
+1 - New better meassurement formula for Power and SWR calculation, compensation and calibration.  
 2 - Setting by Cells control implementation. There are 10 cells you can find opening a FW .hex file in Notepad++ program as Intel HEX file.
 At the end by address EEE0 and EEF0 you can see them and change values. After changing any value you must to correct a checksumm for each
 changed string. Copy the needed string into Checsumm.html and get correct checksumm. It should be green coolor before you can save changed .hex FW file.
