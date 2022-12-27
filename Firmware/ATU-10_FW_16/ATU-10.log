@@ -1,0 +1,24 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16LF18877 -RA -C -DL -O11111114 -fo32 -N"D:\Projects\ATU-10\Firmware_1.6\ATU-10.mcppi" -SP"C:\Program Files (x86)\mikroC PRO for PIC\Defs\" -SP"C:\Program Files (x86)\mikroC PRO for PIC\Uses\P16_Enh\" -SP"D:\Projects\ATU-10\Firmware_1.6\" -IP"C:\Program Files (x86)\mikroC PRO for PIC\Uses\P16_Enh\" "pic_init.c" "oled_control.c" "Soft_I2C.c" "main.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_Conversions.mcl" "__Lib_Button.mcl" "__Lib_ADC_18xxx.mcl"	 
+hint: 0	1139	Available RAM: 4080 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	P16LF18877.c
+diagnostics: 6696	123	Compiled Successfully	P16LF18877.c
+diagnostics: 0	122	Compilation Started	__Lib_Delays.c
+diagnostics: 123	123	Compiled Successfully	__Lib_Delays.c
+diagnostics: 0	122	Compilation Started	pic_init.c
+diagnostics: 62	123	Compiled Successfully	pic_init.c
+diagnostics: 0	122	Compilation Started	font_5x8.h
+diagnostics: 278	123	Compiled Successfully	oled_control.c
+diagnostics: 0	122	Compilation Started	soft_i2c.h
+diagnostics: 92	123	Compiled Successfully	Soft_I2C.c
+diagnostics: 0	122	Compilation Started	pic_init.h
+hint: 0	1004	interrupt handler (interupt at 0x0004)	main.c
+hint: 603	1163	Variable 'swr_2' has been declared, but not used	main.c
+hint: 603	1163	Variable 'pwr_2' has been declared, but not used	main.c
+diagnostics: 953	123	Compiled Successfully	main.c
+diagnostics: 0	127	All files Compiled in 187 ms	 
+hint: 0	1144	Used RAM (bytes): 406 (10%)  Free RAM (bytes): 3674 (90%)	Used RAM (bytes): 406 (10%)  Free RAM (bytes): 3674 (90%)
+hint: 0	1144	Used ROM (program words): 9074 (28%)  Free ROM (program words): 23694 (72%)	Used ROM (program words): 9074 (28%)  Free ROM (program words): 23694 (72%)
+diagnostics: 0	125	Project Linked Successfully	ATU-10.mcppi
+diagnostics: 0	128	Linked in 78 ms	 
+diagnostics: 0	129	Project 'ATU-10.mcppi' completed: 406 ms	 
+diagnostics: 0	103	Finished successfully: 27 Dec 2022, 16:21:46	ATU-10.mcppi
