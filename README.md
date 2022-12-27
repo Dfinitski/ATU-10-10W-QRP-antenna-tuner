@@ -5,9 +5,9 @@
 
 ###### New in FW version 1.6
 1 - New better meassurement formula for Power and SWR calculation, compensation and calibration.  
-2 - Setting by Cells control implementation. There are 10 cells you can find opening a FW .hex file in Notepad++ program as Intel HEX file.
-At the end by address EEE0 and EEF0 you can see them and change values. After changing any value you must to correct a checksumm for each
-changed string. Copy the needed string into Checsumm.html and get correct checksumm. It should be green coolor before you can save changed .hex FW file.
+2 - Setting by Cells control implementation. There are 10 cells you can find opening a FW .hex file in Notepad++ program as Intel HEX file. 
+At the end by address EEE0 and EEF0 you can see them and change values. After changing any value you must to correct a checksumm for each 
+changed string. Copy the needed string into Checsumm.html and get correct checksumm. It should be green color before you can save changed .hex FW file. 
 
 [![](https://github.com/Dfinitski/ATU-10-10W-QRP-antenna-tuner/blob/main/Photos/Cells.jpg)](https://github.com/Dfinitski/ATU-10-10W-QRP-antenna-tuner/blob/main/Photos/Cells.jpg)
 
